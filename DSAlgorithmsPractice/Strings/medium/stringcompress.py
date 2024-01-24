@@ -1,3 +1,7 @@
+"""
+
+
+"""
 def stringCompress(str):
     output = []
     count = 0

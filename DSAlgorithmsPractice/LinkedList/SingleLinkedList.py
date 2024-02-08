@@ -59,10 +59,10 @@ class LinkedList:
             new_node.ref = n.ref
             n.ref = new_node
 
-    # Case 2: Method to ass element before the x element in the linked list
+    # Case 2: Method to add element before the x element in the linked list
     def add_before(self, data, x):
         if self.head is None:
-            print("Linked List ie empty!")
+            print("Linked List is empty!")
             return
         if self.head.data == x:
             new_node = Node(data)
@@ -130,21 +130,21 @@ class LinkedList:
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
    l_list = LinkedList()
-   # l_list.head = Node(1)
-   # second = Node(2)
-   # third = Node(3)
-   # l_list.head.ref = second
-   # second.ref = third
-   l_list.add_begin(40)
-   l_list.add_begin(30)
-   l_list.add_begin(20)
-   l_list.add_begin(10)
-   l_list.add_end(50)
-   l_list.add_end(60)
-   l_list.add_after(55,50)
-   l_list.add_after(45,40)
-   l_list.add_before(35,40)
-   l_list.add_before(25,30)
+   l_list.head = Node(1)
+   second = Node(2)
+   third = Node(3)
+   l_list.head.ref = second
+   second.ref = third
+   # l_list.add_begin(0)
+   # l_list.add_begin(30)
+   # l_list.add_begin(20)
+   # l_list.add_begin(10)
+   l_list.add_end(5)
+   # l_list.add_end(60)
+   # l_list.add_after(55,50)
+   # l_list.add_after(45,40)
+   # l_list.add_before(35,40)
+   # l_list.add_before(25,30)
    # l_list.add_empty(10)
    # l_list.add_empty(20)
    l_list.print_linked_list()

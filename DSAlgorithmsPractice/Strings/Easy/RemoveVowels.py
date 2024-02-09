@@ -13,12 +13,17 @@ Output : wht s yr nm ?
 
 def remove_vowels(input):
     vowels = ['a', 'e', 'i', 'o', 'u']
-    letter = [letter for letter in input if letter not in vowels]
+    letter = [letter for letter in input if letter.lower() not in vowels]
     output = ''.join(letter)
     print(output)
 
 
-remove_vowels("vamsi is a good boy")
+import re
 
 
+def remove_vowels2(input):
+    return re.sub("[aeiouAEIOU]", "", input)
 
+
+remove_vowels("Vamsi is a good boy")
+print(remove_vowels2("Vamsi is a good boy"))

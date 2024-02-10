@@ -23,7 +23,8 @@ def max_sum_subarray(arr, k):
             max_sum = max(max_sum, window_sum)
             window_sum -= arr[start]
             start += 1
-    return max_sum
+    print(max_sum)
+    print(max_sum/k)
 
 
-print(max_sum_subarray([3, 5, 2, 1, 7], 3))
+max_sum_subarray([3, 5, 2, 1, 7], 3)

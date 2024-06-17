@@ -61,7 +61,7 @@ class BST:
 
     """
     first root --> left --> right
-    print root key, left key and the nright key
+    print root key, left  key and the nright key
     """
 
     def preorder(self):

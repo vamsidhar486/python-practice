@@ -22,4 +22,11 @@ class BinaryTree:
         self.lchild = None
         self.rchild = None
 
-    def
+    def inorder(self):
+        if self.lchild:
+            self.lchild.inorder()
+        print(self.key, end=' ')
+        if self.rchild:
+            self.rchild.inorder()
+
+

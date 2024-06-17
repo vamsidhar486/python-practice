@@ -55,5 +55,4 @@ def max_sliding_window(nums, k) :
     return res
 
 
-
 print(max_sliding_window([1,2,3,1,4,5,2,3,6], 3))

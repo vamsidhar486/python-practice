@@ -59,6 +59,10 @@ class BST:
             else:
                 print("Node is not present")
 
+
+    def delete(self, data):
+        if 
+
     """
     first root --> left --> right
     print root key, left  key and the nright key
@@ -91,34 +95,36 @@ class BST:
             self.rchild.postorder()
         print(self.key, end=" ")
 
-# root = BST(10)
-# print(root)
-# print(root.key)
-# print(root.lchild)
-# print(root.rchild)
-# root.lchild = BST(5)
-# print(root)
-# print(root.key)
-# print(root.lchild)
-# print(root.rchild)
-# print(root.lchild.key)
-# print(root.lchild.lchild)
-# print(root.lchild.rchild)
+root = BST(10)
+print(root)
+print(root.key)
+print(root.lchild)
+print(root.rchild)
+root.lchild = BST(5)
+print(root)
+print(root.key)
+print(root.lchild)
+print(root.rchild)
+print(root.lchild.key)
+print(root.lchild.lchild)
+print(root.lchild.rchild)
 
 # root = BST(None)
 # root.insert(20)
 
-root = BST(10)
-list1 = [20, 4, 30, 4, 1, 5, 6]
-for i in list1:
-    root.insert(i)
-root.search(6)
-root.search(11)
-print("Pre Order")
-root.preorder()
-print()
-print("In Order")
-root.inorder()
-print()
-print("Post Order")
-root.postorder()
+# root = BST(10)
+# list1 = [20, 4, 30, 4, 1, 5, 6]
+# for i in list1:
+#     root.insert(i)
+
+# print(root)
+# root.search(6)
+# root.search(11)
+# print("Pre Order")
+# root.preorder()
+# print()
+# print("In Order")
+# root.inorder()
+# print()
+# print("Post Order")
+# root.postorder()

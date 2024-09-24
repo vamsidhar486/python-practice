@@ -1,6 +1,6 @@
 """
-Binary Search Tree as all left elements less than its parent and right elements grater than itr parent
-all sub trees should be binary search trees
+Binary Search Tree has all left elements less than its parent and right elements grater than its parent
+and all subtrees should be binary search trees
 """
 
 
@@ -61,11 +61,42 @@ class BST:
 
 
     def delete(self, data):
-        if 
+        if self.key is None:
+            print("Tree is empty")
+            return
+        if data < self.key:
+            if self.lchild:
+                self.lchild = self.lchild.delete(data)
+            else:
+                print("Node is not present in the tree")
+        elif data > self.key:
+            if self.rchild:
+                self.rchild = self.rchild.delete(data)
+            else:
+                print("Node is not present in the tree")
+
+        else:
+            if self.lchild is None:
+                temp= self.rchild
+                self = None
+                return temp
+            if self.rchild is None:
+                temp = self.lchild
+                self = None
+                return temp
+            node = self.rchild
+            while node.lchild:
+                node = node.lchild
+            self.key = node.key
+            self.rchild = self.rchild.delete(node.key)
+        return self
+
+
+
 
     """
     first root --> left --> right
-    print root key, left  key and the nright key
+    print root key, left  key and then right key
     """
 
     def preorder(self):
@@ -95,31 +126,20 @@ class BST:
             self.rchild.postorder()
         print(self.key, end=" ")
 
+
+root = BST(None)
+root.insert(20)
+
 root = BST(10)
+list1 = [20, 4, 30, 4, 1, 5, 6]
+for i in list1:
+    root.insert(i)
+
 print(root)
-print(root.key)
-print(root.lchild)
-print(root.rchild)
-root.lchild = BST(5)
-print(root)
-print(root.key)
-print(root.lchild)
-print(root.rchild)
-print(root.lchild.key)
-print(root.lchild.lchild)
-print(root.lchild.rchild)
+root.search(6)
+(root.search(11))
 
-# root = BST(None)
-# root.insert(20)
 
-# root = BST(10)
-# list1 = [20, 4, 30, 4, 1, 5, 6]
-# for i in list1:
-#     root.insert(i)
-
-# print(root)
-# root.search(6)
-# root.search(11)
 # print("Pre Order")
 # root.preorder()
 # print()

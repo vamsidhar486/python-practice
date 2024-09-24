@@ -1,4 +1,6 @@
- """
+import collections
+
+"""
 
 """
 
@@ -177,17 +179,17 @@ def delete_edge(v1, v2, cost):
         graph[v1].remove([v2, cost])
 
 
-visited = set()
-
-
-def DFS(node, visited, graph):
-    if node not in graph:
-        print(node, "not present in the graph")
-        return
-    if node not in visited:
-        visited.add(node)
-        for i in graph[node]:
-            DFS(i, visited, graph)  # for weighted graph i[0]
+# visited = set()
+#
+#
+# def DFS(node, visited, graph):
+#     if node not in graph:
+#         print(node, "not present in the graph")
+#         return
+#     if node not in visited:
+#         visited.add(node)
+#         for i in graph[node]:
+#             DFS(i, visited, graph)  # for weighted graph i[0]
 
 
 def DFS(node, graph):
@@ -203,6 +205,24 @@ def DFS(node, graph):
         for i in graph[current_node]:
             stack.append(i)
 
+    return visited
+
+def BFS(node, graph):
+    visited = set()
+    if node not in graph:
+        print(node, "is not present in the graph")
+        return
+    else:
+        visited.add(node)
+    queue = collections.deque[node]
+    while queue:  # this has to be performed till queue is empty
+        current_node = queue.popleft()
+        for i in graph[current_node]:
+            if i not in visited:
+                visited.add(i)
+                queue.append(i)
+    return visited
+
 
 add_vertex("A")
 print(graph)
@@ -214,4 +234,5 @@ add_vertex("E")
 add_edge("A", "B", 10)
 add_edge("C", "D", "1")
 print(graph)
-DFS("A", visited, graph)
+print(DFS("A", graph))
+# BFS("A", graph)

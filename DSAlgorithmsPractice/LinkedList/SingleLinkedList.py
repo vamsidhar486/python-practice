@@ -127,6 +127,14 @@ class LinkedList:
                 n.ref = n.ref.ref
 
 
+
+# def middle_node(linked_list):
+#     slow = fast = linked_list.head
+#
+#     while
+
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
    l_list = LinkedList()

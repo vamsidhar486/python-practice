@@ -193,7 +193,7 @@ def delete_edge(v1, v2, cost):
 
 
 def DFS(node, graph):
-    visited = set()
+    visited = set( )
     if node not in graph:
         print(node, "is not present in the graph")
         return
@@ -225,12 +225,16 @@ def BFS(node, graph):
 
 
 add_vertex("A")
-print(graph)
+# print(graph)
 add_vertex("A")
 add_vertex("B")
 add_vertex("C")
 add_vertex("D")
 add_vertex("E")
+add_vertex("F")
+add_vertex("G")
+add_vertex("h")
+add_vertex("I")
 add_edge("A", "B", 10)
 add_edge("C", "D", "1")
 print(graph)
